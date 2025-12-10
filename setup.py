@@ -7,7 +7,7 @@ Created by: Krishna D
 from setuptools import setup, find_packages
 import pathlib
 
-# Read the README file
+
 here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / "README.md").read_text(encoding="utf-8")
 
@@ -17,9 +17,9 @@ setup(
     description="The 10-Headed Web Browser - A powerful text-based browser for the terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/krishnad/ravanan",
+    url="https://github.com/krishna182005/ravanan",
     author="Krishna D",
-    author_email="your.email@example.com",  # TODO: Replace with your actual email
+    
     
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -65,12 +65,13 @@ setup(
     },
     
     project_urls={
-        "Bug Reports": "https://github.com/krishnad/ravanan/issues",
-        "Source": "https://github.com/krishnad/ravanan",
-        "Documentation": "https://github.com/krishnad/ravanan#readme",
-        "Changelog": "https://github.com/krishnad/ravanan/blob/main/CHANGELOG.md",
+        "Bug Reports": "https://github.com/krishna182005/ravanan/issues",
+        "Source": "https://github.com/krishna182005/ravanan",
+        "Documentation": "https://github.com/krishna182005/ravanan#readme",
+        "Changelog": "https://github.com/krishna182005/ravanan/blob/main/CHANGELOG.md",
     },
     
     include_package_data=True,
     zip_safe=False,
 )
+
