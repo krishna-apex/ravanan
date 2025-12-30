@@ -11,7 +11,7 @@
 |_|_\  /_/ \_\   \_/   /_/ \_\ |_|\_|/_/ \_\ |_|\_|      
 
 The 10-Minded Scholar King • Terminal Web Browser        
-                v1.0.4 • By Krishna D
+                v1.0.5 • By Krishna D
 ```
 
 A **powerful text-based web browser** that runs entirely in your terminal. Named after the legendary Ravana from Hindu mythology, whose 10 heads represented vast knowledge and wisdom from multiple perspectives.
@@ -517,6 +517,7 @@ If you find Ravanan useful, please consider giving it a star on GitHub! ⭐
 - **Python Version**: 3.8+
 - **Platforms**: Windows, Linux, macOS
 - **License**: MIT (Open Source)
+
 
 
 
