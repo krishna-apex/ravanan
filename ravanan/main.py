@@ -21,8 +21,13 @@ from .browser.navigator import Navigator
 class Ravanan:
     """Main browser application"""
     
+<<<<<<< HEAD
     def __init__(self, home_url: str = "https://example.com"):
         self.fetcher = WebFetcher()
+=======
+    def __init__(self, home_url: str = "https://duckduckgo.com", timeout: int = 30, proxy: dict = None):
+        self.fetcher = WebFetcher(timeout=timeout, proxy=proxy)
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
         self.parser = HTMLParser()
         self.renderer = TextRenderer()
         self.navigator = Navigator()
@@ -186,9 +191,64 @@ class Ravanan:
         
         # Version
         elif cmd_lower == 'version':
+<<<<<<< HEAD
             print(f"\n🔱 Ravanan Browser v1.0.0")
             print(f"Created by Krishna D\n")
         
+=======
+            print(f"\n🔱 Ravanan Browser v1.0.4")
+            print(f"Created by Krishna D\n")
+        
+        # Configure timeout
+        elif cmd_lower.startswith('timeout '):
+            try:
+                timeout_val = int(command.split()[1])
+                if timeout_val > 0:
+                    self.fetcher.set_timeout(timeout_val)
+                    print(f"\n✅ Timeout set to {timeout_val} seconds\n")
+                else:
+                    self.renderer.render_error("Timeout must be a positive number")
+            except (ValueError, IndexError):
+                self.renderer.render_error("Usage: timeout <seconds> (e.g., timeout 30)")
+        
+        # Show current timeout
+        elif cmd_lower == 'timeout':
+            print(f"\n⏱️  Current timeout: {self.fetcher.timeout} seconds\n")
+        
+        # Configure proxy
+        elif cmd_lower == 'proxy tor':
+            self.fetcher.use_tor()
+            print(f"\n✅ Tor proxy enabled (127.0.0.1:9050)\n")
+            print(f"   Make sure Tor is running!\n")
+        
+        # Set custom proxy
+        elif cmd_lower.startswith('proxy ') and cmd_lower != 'proxy tor' and cmd_lower != 'proxy off':
+            proxy_url = command.split(maxsplit=1)[1].strip()
+            if proxy_url:
+                self.fetcher.set_proxy({
+                    'http': proxy_url,
+                    'https': proxy_url
+                })
+                print(f"\n✅ Proxy set to: {proxy_url}\n")
+            else:
+                self.renderer.render_error("Usage: proxy <url> (e.g., proxy socks5://127.0.0.1:9050)")
+        
+        # Disable proxy
+        elif cmd_lower == 'proxy off':
+            self.fetcher.disable_proxy()
+            print(f"\n✅ Proxy disabled\n")
+        
+        # Show proxy status
+        elif cmd_lower == 'proxy':
+            if self.fetcher.proxy:
+                print(f"\n🔐 Proxy enabled:")
+                for key, value in self.fetcher.proxy.items():
+                    print(f"   {key}: {value}")
+                print()
+            else:
+                print(f"\n🔓 No proxy configured (direct connection)\n")
+        
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
         # Search (case-insensitive)
         elif command.startswith('/') and not command.startswith('//'):
             query = command[1:].strip()
@@ -331,6 +391,18 @@ class Ravanan:
 ║  stats        → Show browser statistics                              ║
 ║  about        → About Ravanan browser                                ║
 ║                                                                      ║
+<<<<<<< HEAD
+=======
+║  � PROXY & TIMEOUT SETTINGS                                         ║
+║  ──────────────────────────                                          ║
+║  proxy        → Show current proxy status                            ║
+║  proxy tor    → Enable Tor proxy (127.0.0.1:9050)                    ║
+║  proxy [url]  → Set custom proxy (e.g., socks5://host:port)         ║
+║  proxy off    → Disable proxy                                        ║
+║  timeout      → Show current timeout value                           ║
+║  timeout [n]  → Set timeout in seconds (e.g., timeout 60)            ║
+║                                                                      ║
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 ║  💾 UTILITY COMMANDS                                                 ║
 ║  ──────────────────                                                  ║
 ║  save         → Save current page as text file                       ║
@@ -350,6 +422,11 @@ class Ravanan:
 ║  • Use short domains: 'wikipedia.org' works!                         ║
 ║  • Numbers 1-999 for link navigation                                 ║
 ║  • All commands are case-insensitive                                 ║
+<<<<<<< HEAD
+=======
+║  • Default timeout: 30 seconds (configurable)                        ║
+║  • Tor requires Tor service running locally                          ║
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 ║                                                                      ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║  Created by: Krishna D | Inspired by Ravana's 10 heads of wisdom    ║
@@ -366,9 +443,16 @@ class Ravanan:
 ║                                                              ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
+<<<<<<< HEAD
 ║  Version: 1.0.0                                              ║
 ║  Created by: Krishna D                                       ║
 ║  Release Date: November 1, 2025                              ║
+=======
+║  Version: 1.0.4                                              ║
+║  Created by: Krishna D                                       ║
+║  Development Time: 3-5 months                                ║
+║  Release Date: December 30, 2025                             ║
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 ║                                                              ║
 ║  Why "Ravanan"?                                              ║
 ║  ──────────────                                              ║
@@ -577,8 +661,12 @@ class Ravanan:
     
     def quit(self):
         """Quit the browser"""
+<<<<<<< HEAD
         print("\n👋 Thanks for using Ravanan! May you browse with the wisdom of 10 heads! 🔱\n")
         print("   Created by Krishna D\n")
+=======
+        print("\n👋 Goodbye!\n")
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
         self.running = False
         sys.exit(0)
 
@@ -590,9 +678,17 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
+<<<<<<< HEAD
   python main.py
   python main.py https://example.com
   python main.py wikipedia.org
+=======
+  ravanan
+  ravanan https://duckduckgo.com
+  ravanan wikipedia.org --timeout 60
+  ravanan duckduckgo.com --proxy-tor
+  ravanan --proxy socks5://127.0.0.1:9050
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 
 The 10 Heads of Ravanan represent:
   1. Smart Parsing  2. Fast Fetching   3. Beautiful Rendering
@@ -607,24 +703,58 @@ Created by: Krishna D
     parser.add_argument(
         'url',
         nargs='?',
+<<<<<<< HEAD
         default='https://example.com',
         help='URL to open on startup (default: https://example.com)'
+=======
+        default='https://duckduckgo.com',
+        help='URL to open on startup (default: https://duckduckgo.com)'
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     )
     
     parser.add_argument(
         '--home',
+<<<<<<< HEAD
         default='https://example.com',
         help='Set home page URL (default: https://example.com)'
+=======
+        default='https://duckduckgo.com',
+        help='Set home page URL (default: https://duckduckgo.com)'
+    )
+    
+    parser.add_argument(
+        '--timeout',
+        type=int,
+        default=30,
+        help='Request timeout in seconds (default: 30)'
+    )
+    
+    parser.add_argument(
+        '--proxy',
+        type=str,
+        help='Proxy URL (e.g., socks5://127.0.0.1:9050 or http://proxy.example.com:8080)'
+    )
+    
+    parser.add_argument(
+        '--proxy-tor',
+        action='store_true',
+        help='Use Tor proxy (socks5h://127.0.0.1:9050)'
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     )
     
     parser.add_argument(
         '--version',
         action='version',
+<<<<<<< HEAD
         version='Ravanan 1.0.0 - Created by Krishna D'
+=======
+        version='Ravanan 1.0.4 - Created by Krishna D'
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     )
     
     args = parser.parse_args()
     
+<<<<<<< HEAD
     # Display banner
     print("""
     ╔═══════════════════════════════════════════════════════════╗
@@ -645,6 +775,28 @@ Created by: Krishna D
     
     # Create and start browser
     browser = Ravanan(home_url=args.home)
+=======
+    # Setup proxy configuration
+    proxy = None
+    if args.proxy_tor:
+        proxy = {
+            'http': 'socks5h://127.0.0.1:9050',
+            'https': 'socks5h://127.0.0.1:9050'
+        }
+        print("🔐 Tor proxy enabled (make sure Tor is running!)")
+    elif args.proxy:
+        proxy = {
+            'http': args.proxy,
+            'https': args.proxy
+        }
+        print(f"🔐 Proxy enabled: {args.proxy}")
+    
+    if args.timeout != 30:
+        print(f"⏱️  Timeout: {args.timeout} seconds")
+    
+    # Create and start browser
+    browser = Ravanan(home_url=args.home, timeout=args.timeout, proxy=proxy)
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     browser.start(initial_url=args.url)
 
 

@@ -130,20 +130,31 @@ class TextRenderer:
         table.add_column("Link Text", style="white")
         table.add_column("URL", style="blue dim", max_width=50)
         
+<<<<<<< HEAD
         # Show first 20 links to avoid clutter
         display_links = links[:20]
         for link in display_links:
+=======
+        # Show all links (removed 20 link limit)
+        for link in links:
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
             table.add_row(
                 f"[{link['index']}]",
                 link['text'][:60] + "..." if len(link['text']) > 60 else link['text'],
                 link['url'][:50] + "..." if len(link['url']) > 50 else link['url']
             )
         
+<<<<<<< HEAD
         if len(links) > 20:
             table.add_row("...", f"({len(links) - 20} more links)", "...")
         
         self.console.print(table)
         self.console.print()
+=======
+        self.console.print(table)
+        self.console.print()
+        self.console.print(f"💡 Type 'links' to see all {len(links)} links with full URLs", style="dim italic")
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     
     def _render_footer(self):
         """Render footer with available commands"""

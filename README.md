@@ -11,7 +11,7 @@
 |_|_\  /_/ \_\   \_/   /_/ \_\ |_|\_|/_/ \_\ |_|\_|      
 
 The 10-Minded Scholar King • Terminal Web Browser        
-                v1.0.0 • By Krishna D
+                v1.0.4 • By Krishna D
 ```
 
 A **powerful text-based web browser** that runs entirely in your terminal. Named after the legendary Ravana from Hindu mythology, whose 10 heads represented vast knowledge and wisdom from multiple perspectives.
@@ -20,7 +20,7 @@ A **powerful text-based web browser** that runs entirely in your terminal. Named
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/krishnad/ravanan)
+[![Version](https://img.shields.io/badge/version-1.0.4-brightgreen.svg)](https://github.com/krishna182005/ravanan)
 [![PyPI](https://img.shields.io/badge/pypi-ravanan-blue)](https://pypi.org/project/ravanan/)
 
 ---
@@ -82,7 +82,7 @@ cd ravanan
 pip install -r requirements.txt
 
 # Run the browser
-python main.py
+python3 -m ravanan
 ```
 
 ### Option 3: Development Installation
@@ -106,7 +106,7 @@ ravanan
 ### Basic Usage
 
 ```bash
-# Start with default page (example.com)
+# Start with default page (duckduckgo.com)
 ravanan
 
 # Open a specific URL

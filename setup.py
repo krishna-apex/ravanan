@@ -13,7 +13,11 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="ravanan",
+<<<<<<< HEAD
     version="1.0.3",
+=======
+    version="1.0.4",
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     description="The 10-Headed Web Browser - A powerful text-based browser for the terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -56,6 +60,10 @@ setup(
         "beautifulsoup4>=4.12.0",
         "rich>=13.0.0",
         "lxml>=4.9.0",
+<<<<<<< HEAD
+=======
+        "PySocks>=1.7.1",
+>>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     ],
     
     entry_points={
