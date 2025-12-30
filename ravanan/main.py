@@ -21,13 +21,8 @@ from .browser.navigator import Navigator
 class Ravanan:
     """Main browser application"""
     
-<<<<<<< HEAD
-    def __init__(self, home_url: str = "https://example.com"):
-        self.fetcher = WebFetcher()
-=======
     def __init__(self, home_url: str = "https://duckduckgo.com", timeout: int = 30, proxy: dict = None):
         self.fetcher = WebFetcher(timeout=timeout, proxy=proxy)
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
         self.parser = HTMLParser()
         self.renderer = TextRenderer()
         self.navigator = Navigator()

@@ -10,17 +10,6 @@ from urllib.parse import urljoin, urlparse
 class WebFetcher:
     """Fetches web content via HTTP/HTTPS"""
     
-<<<<<<< HEAD
-    def __init__(self, timeout: int = 10, user_agent: str = None):
-        self.timeout = timeout
-        self.user_agent = user_agent or (
-            "TermLynx/1.0 (Text-based Browser; +https://github.com/yourusername/termlynx)"
-        )
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': self.user_agent
-        })
-=======
     def __init__(self, timeout: int = 30, user_agent: str = None, proxy: dict = None):
         self.timeout = timeout
         self.user_agent = user_agent or (
@@ -43,7 +32,6 @@ class WebFetcher:
         })
         if self.proxy:
             self.session.proxies.update(self.proxy)
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     
     def fetch(self, url: str) -> Tuple[bool, str, str, int]:
         """
