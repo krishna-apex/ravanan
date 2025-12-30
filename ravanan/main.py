@@ -701,7 +701,7 @@ Created by: Krishna D
     parser.add_argument(
         '--version',
         action='version',
-        version='Ravanan 1.0.4 - Created by Krishna D'
+        version='Ravanan 1.0.5 - Created by Krishna D'
     )
     
     args = parser.parse_args()

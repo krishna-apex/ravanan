@@ -25,7 +25,7 @@ class RavananBanner:
 |_|_\  /_/ \_\   \_/   /_/ \_\ |_|\_|/_/ \_\ |_|\_| 
                                                     
 The 10-Headed Scholar King • Terminal Web Browser
-                v1.0.4 • By Krishna D
+                v1.0.5 • By Krishna D
     """
 
     # Large banner for wide terminals (≥70 columns)
@@ -39,7 +39,7 @@ The 10-Headed Scholar King • Terminal Web Browser
 |   /   / _ \   \ V /   / _ \  | .` | / _ \  | .` | 
 |_|_\  /_/ \_\   \_/   /_/ \_\ |_|\_|/_/ \_\ |_|\_| 
 
-    The 10-Headed Web Browser • v1.0.4 • Krishna D
+    The 10-Headed Web Browser • v1.0.5 • Krishna D
     """
 
     # Medium banner for medium terminals (≥55 columns)
@@ -50,7 +50,7 @@ The 10-Headed Scholar King • Terminal Web Browser
 |    -|     |  |  |     | | | |     | | | |
 |__|__|__|__|\___/|__|__|_|___|__|__|_|___|
                                            
-      10-Headed Browser • v1.0.4 • Krishna D
+      10-Headed Browser • v1.0.5 • Krishna D
     """
 
     # Compact banner for smaller terminals (≥42 columns)
@@ -60,7 +60,7 @@ The 10-Headed Scholar King • Terminal Web Browser
  )   //    \\ \/ //    \/    //    \/    /
 (__\_)\_/\_/ \__/ \_/\_/\_)__)\_/\_/\_)__)
 
-       10-Heads • v1.0.4 • Krishna D
+       10-Heads • v1.0.5 • Krishna D
     """
     
     # Minimal banner for small terminals (≥30 columns)
@@ -70,13 +70,13 @@ The 10-Headed Scholar King • Terminal Web Browser
  )   //    \\ \/ //    \/    //    \/    /
 (__\_)\_/\_/ \__/ \_/\_/\_)__)\_/\_/\_)__)
 
-      v1.0.4 • Krishna D
+      v1.0.5 • Krishna D
     """
 
     # Text-only banner for very small terminals (<30 columns)
     TINY_BANNER = """
     =======================
-     RAVANAN v1.0.4
+     RAVANAN v1.0.5
      10-Headed Browser
      By Krishna D
     =======================
