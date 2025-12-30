@@ -6,7 +6,7 @@ Created by: Krishna D
 License: MIT
 """
 
-__version__ = '1.0.4'
+__version__ = '1.0.5'
 __author__ = 'Krishna D'
 __email__ = 'your.email@example.com'
 

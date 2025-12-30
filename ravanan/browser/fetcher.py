@@ -57,6 +57,8 @@ class WebFetcher:
             
             # Check if request was successful
             if response.status_code == 200:
+                # Ensure proper text decoding
+                response.encoding = response.apparent_encoding or 'utf-8'
                 return True, response.text, response.url, response.status_code
             elif response.status_code == 404:
                 return False, "Error 404: Page not found", url, 404

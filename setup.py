@@ -13,7 +13,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="ravanan",
-    version="1.0.4",
+    version="1.0.5",
     description="The 10-Headed Web Browser - A powerful text-based browser for the terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
