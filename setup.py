@@ -56,10 +56,7 @@ setup(
         "beautifulsoup4>=4.12.0",
         "rich>=13.0.0",
         "lxml>=4.9.0",
-<<<<<<< HEAD
-=======
         "PySocks>=1.7.1",
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     ],
     
     entry_points={

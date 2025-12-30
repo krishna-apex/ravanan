@@ -51,12 +51,8 @@ class WebFetcher:
             response = self.session.get(
                 url,
                 timeout=self.timeout,
-<<<<<<< HEAD
-                allow_redirects=True
-=======
                 allow_redirects=True,
                 proxies=self.proxy
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
             )
             
             # Check if request was successful
@@ -103,8 +99,6 @@ class WebFetcher:
             url = 'https://' + url
             
         return url
-<<<<<<< HEAD
-=======
     
     def set_timeout(self, timeout: int):
         """
@@ -143,4 +137,3 @@ class WebFetcher:
         Disable any configured proxy
         """
         self.set_proxy(None)
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)

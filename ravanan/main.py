@@ -186,11 +186,6 @@ class Ravanan:
         
         # Version
         elif cmd_lower == 'version':
-<<<<<<< HEAD
-            print(f"\n🔱 Ravanan Browser v1.0.0")
-            print(f"Created by Krishna D\n")
-        
-=======
             print(f"\n🔱 Ravanan Browser v1.0.4")
             print(f"Created by Krishna D\n")
         
@@ -243,7 +238,6 @@ class Ravanan:
             else:
                 print(f"\n🔓 No proxy configured (direct connection)\n")
         
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
         # Search (case-insensitive)
         elif command.startswith('/') and not command.startswith('//'):
             query = command[1:].strip()
@@ -386,8 +380,6 @@ class Ravanan:
 ║  stats        → Show browser statistics                              ║
 ║  about        → About Ravanan browser                                ║
 ║                                                                      ║
-<<<<<<< HEAD
-=======
 ║  � PROXY & TIMEOUT SETTINGS                                         ║
 ║  ──────────────────────────                                          ║
 ║  proxy        → Show current proxy status                            ║
@@ -397,7 +389,6 @@ class Ravanan:
 ║  timeout      → Show current timeout value                           ║
 ║  timeout [n]  → Set timeout in seconds (e.g., timeout 60)            ║
 ║                                                                      ║
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 ║  💾 UTILITY COMMANDS                                                 ║
 ║  ──────────────────                                                  ║
 ║  save         → Save current page as text file                       ║
@@ -417,11 +408,8 @@ class Ravanan:
 ║  • Use short domains: 'wikipedia.org' works!                         ║
 ║  • Numbers 1-999 for link navigation                                 ║
 ║  • All commands are case-insensitive                                 ║
-<<<<<<< HEAD
-=======
 ║  • Default timeout: 30 seconds (configurable)                        ║
 ║  • Tor requires Tor service running locally                          ║
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 ║                                                                      ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║  Created by: Krishna D | Inspired by Ravana's 10 heads of wisdom    ║
@@ -438,16 +426,10 @@ class Ravanan:
 ║                                                              ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
-<<<<<<< HEAD
-║  Version: 1.0.0                                              ║
-║  Created by: Krishna D                                       ║
-║  Release Date: November 1, 2025                              ║
-=======
 ║  Version: 1.0.4                                              ║
 ║  Created by: Krishna D                                       ║
 ║  Development Time: 3-5 months                                ║
 ║  Release Date: December 30, 2025                             ║
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 ║                                                              ║
 ║  Why "Ravanan"?                                              ║
 ║  ──────────────                                              ║
@@ -656,12 +638,7 @@ class Ravanan:
     
     def quit(self):
         """Quit the browser"""
-<<<<<<< HEAD
-        print("\n👋 Thanks for using Ravanan! May you browse with the wisdom of 10 heads! 🔱\n")
-        print("   Created by Krishna D\n")
-=======
         print("\n👋 Goodbye!\n")
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
         self.running = False
         sys.exit(0)
 
@@ -673,17 +650,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-<<<<<<< HEAD
-  python main.py
-  python main.py https://example.com
-  python main.py wikipedia.org
-=======
   ravanan
   ravanan https://duckduckgo.com
   ravanan wikipedia.org --timeout 60
   ravanan duckduckgo.com --proxy-tor
   ravanan --proxy socks5://127.0.0.1:9050
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
 
 The 10 Heads of Ravanan represent:
   1. Smart Parsing  2. Fast Fetching   3. Beautiful Rendering
@@ -698,21 +669,12 @@ Created by: Krishna D
     parser.add_argument(
         'url',
         nargs='?',
-<<<<<<< HEAD
-        default='https://example.com',
-        help='URL to open on startup (default: https://example.com)'
-=======
         default='https://duckduckgo.com',
         help='URL to open on startup (default: https://duckduckgo.com)'
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     )
     
     parser.add_argument(
         '--home',
-<<<<<<< HEAD
-        default='https://example.com',
-        help='Set home page URL (default: https://example.com)'
-=======
         default='https://duckduckgo.com',
         help='Set home page URL (default: https://duckduckgo.com)'
     )
@@ -734,43 +696,16 @@ Created by: Krishna D
         '--proxy-tor',
         action='store_true',
         help='Use Tor proxy (socks5h://127.0.0.1:9050)'
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     )
     
     parser.add_argument(
         '--version',
         action='version',
-<<<<<<< HEAD
-        version='Ravanan 1.0.0 - Created by Krishna D'
-=======
         version='Ravanan 1.0.4 - Created by Krishna D'
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     )
     
     args = parser.parse_args()
     
-<<<<<<< HEAD
-    # Display banner
-    print("""
-    ╔═══════════════════════════════════════════════════════════╗
-    ║                                                           ║
-    ║        ██████  █████ ██   ██ █████ ███   ██ █████ ███   ║
-    ║        ██   ██ ██ ██ ██   ██ ██ ██ ████  ██ ██ ██ ████  ║
-    ║        ██████  █████  ██ ██  █████ ██ ██ ██ █████ ██ ██ ║
-    ║        ██   ██ ██ ██   ███   ██ ██ ██  ████ ██ ██ ██  ██║
-    ║        ██   ██ ██  ██   █    ██  █ ██   ███ ██  █ ██   █║
-    ║                                                           ║
-    ║              The 10-Headed Web Browser                    ║
-    ║              By Krishna D  •  v1.0.0                      ║
-    ║                                                           ║
-    ╚═══════════════════════════════════════════════════════════╝
-    
-    Type '?' for help  •  'about' for info  •  'q' to quit
-    """)
-    
-    # Create and start browser
-    browser = Ravanan(home_url=args.home)
-=======
     # Setup proxy configuration
     proxy = None
     if args.proxy_tor:
@@ -791,7 +726,6 @@ Created by: Krishna D
     
     # Create and start browser
     browser = Ravanan(home_url=args.home, timeout=args.timeout, proxy=proxy)
->>>>>>> 928bfc6 (Ravanan v1.0.4 - Terminal browser with Tor support and link pagination fix)
     browser.start(initial_url=args.url)
 
 
