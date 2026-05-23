@@ -20,7 +20,7 @@ A **powerful text-based web browser** that runs entirely in your terminal. Named
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.4-brightgreen.svg)](https://github.com/krishna182005/ravanan)
+[![Version](https://img.shields.io/badge/version-1.0.4-brightgreen.svg)](https://github.com/krishna-apex/ravanan)
 [![PyPI](https://img.shields.io/badge/pypi-ravanan-blue)](https://pypi.org/project/ravanan/)
 
 ---
@@ -75,7 +75,7 @@ ravanan
 
 ```bash
 # Clone the repository
-git clone https://github.com/krishna182005/ravanan.git
+git clone https://github.com/krishna-apex/ravanan.git
 cd ravanan
 
 # Install dependencies
@@ -89,7 +89,7 @@ python3 -m ravanan
 
 ```bash
 # Clone the repository
-git clone https://github.com/krishna182005/ravanan.git
+git clone https://github.com/krishna-apex/ravanan.git
 cd ravanan
 
 # Install in editable mode
@@ -362,7 +362,7 @@ We love your input! We want to make contributing to Ravanan as easy and transpar
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/krishna182005/ravanan.git
+   git clone https://github.com/krishna-apex/ravanan.git
    cd ravanan
    ```
 3. **Create a feature branch**:
@@ -384,7 +384,7 @@ We love your input! We want to make contributing to Ravanan as easy and transpar
 
 ```bash
 # Clone the repository
-git clone https://github.com/krishna182005/ravanan.git
+git clone https://github.com/krishna-apex/ravanan.git
 cd ravanan
 
 # Create a virtual environment (optional but recommended)
@@ -473,7 +473,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ### Community Requested
 
-Vote for features or suggest new ones in [GitHub Issues](https://github.com/krishna182005/ravanan/issues)!
+Vote for features or suggest new ones in [GitHub Issues](https://github.com/krishna-apex/ravanan/issues)!
 
 ---
 
@@ -490,9 +490,9 @@ Vote for features or suggest new ones in [GitHub Issues](https://github.com/kris
 ## 📧 Contact & Support
 
 - **Creator**: Krishna D
-- **GitHub**: [https://github.com/krishna182005/ravanan/](https://github.com/krishna182005/ravanan/)
-- **Issues**: [Report a bug or request a feature](https://github.com/krishna182005/ravanan/issues)
-- **Discussions**: [Join the community](https://github.com/krishna182005/discussions)
+- **GitHub**: [https://github.com/krishna-apex/ravanan/](https://github.com/krishna-apex/ravanan/)
+- **Issues**: [Report a bug or request a feature](https://github.com/krishna-apex/ravanan/issues)
+- **Discussions**: [Join the community](https://github.com/krishna-apex/discussions)
 
 ---
 
@@ -510,7 +510,7 @@ If you find Ravanan useful, please consider giving it a star on GitHub! ⭐
 
 ## 📊 Project Stats
 
-- **Development Time**: ~3 hours
+- **Development Time**: ~ 15 days
 - **Total Lines of Code**: ~1,300
 - **Test Coverage**: 100% of core modules
 - **Dependencies**: 4 (all stable, well-maintained)
